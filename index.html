@@ -40,12 +40,35 @@ ol.steps li{counter-increment:s;background:var(--card);border:1px solid var(--li
 ol.steps li::before{content:counter(s);display:inline-grid;place-items:center;width:30px;height:30px;border-radius:50%;background:var(--accent);color:#fff;font-family:Prompt;margin-bottom:8px}
 .contact{background:var(--soft);border-radius:18px;padding:36px 24px;text-align:center}
 footer{padding:28px 0;color:var(--muted);font-size:.9rem;text-align:center}
+
+.pf{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.pf .card{padding:0;overflow:hidden}
+.pf .shot{aspect-ratio:4/3;background:var(--soft);display:flex;align-items:center;justify-content:center;padding:18px;border-bottom:1px solid var(--line)}
+.pf .meta{padding:16px 18px}.pf .meta p{font-size:.92rem}
+.phone{height:100%;aspect-ratio:9/16;border-radius:16px;border:4px solid #1c1917;position:relative;overflow:hidden;color:#fff;font-family:Prompt;display:flex;flex-direction:column;justify-content:space-between;padding:12px 8px;text-align:center}
+.phone .top{font-weight:700;font-size:13px;line-height:1.25;text-shadow:0 2px 6px rgba(0,0,0,.35)}
+.phone .play{width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,.9);margin:0 auto;position:relative}
+.phone .play::after{content:"";position:absolute;left:13px;top:10px;border-left:11px solid #e11d48;border-top:7px solid transparent;border-bottom:7px solid transparent}
+.phone .cc{background:rgba(0,0,0,.55);border-radius:4px;font-size:9px;padding:3px 4px}
+.mock{background:#fff;border-radius:10px;box-shadow:0 6px 20px rgba(0,0,0,.14);color:#1c1917;font-family:Prompt;font-size:10px;overflow:hidden;display:flex;flex-direction:column}
+.mock.full{width:100%;height:100%}.mock.slide{width:100%;aspect-ratio:16/9}.mock.sq{height:100%;aspect-ratio:1}
+.mock .bar{background:#16a34a;color:#fff;padding:6px 10px;font-weight:600;font-size:11px}
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;padding:8px 8px 0}
+.kpis div{background:#f5f5f4;border-radius:6px;padding:5px 6px}.kpis b{display:block;font-size:13px}.kpis span{color:#78716c;font-size:8px}
+.mock svg{flex:1;width:100%;min-height:0}
+.rk{padding:6px 10px;display:grid;gap:5px}.rk div{display:grid;grid-template-columns:56px 1fr 30px;align-items:center;gap:6px}
+.rk i{display:block;height:8px;border-radius:4px;background:#16a34a}.rk .lo i{background:#f59e0b}.rk em{font-style:normal;text-align:right;color:#57534e}
+.sl{display:grid;grid-template-columns:1fr 1.2fr;gap:8px;padding:10px 12px;flex:1}.sl h4{font-size:13px;color:#e11d48;grid-column:1/-1}.sl ul{padding-left:12px;font-size:9px;color:#44403c}
+.ln{flex:1;display:flex;flex-direction:column}.ln .hd{background:#dc2626;color:#fff;padding:8px 10px}.ln .hd b{display:block;font-size:12px}.ln .hd span{font-size:8px;opacity:.85}
+.ln .big{text-align:center;padding:8px 0 4px}.ln .big b{font-size:20px;color:#dc2626;display:block}.ln .big span{font-size:8px;color:#78716c}
+.ln .r{display:flex;justify-content:space-between;border-top:1px solid #eee;padding:4px 10px}
+.demo{font-size:.8rem;color:var(--muted)}
 </style>
 </head>
 <body>
 <header><div class="wrap"><nav>
   <div class="logo">Worachet<span>.</span>Studio</div>
-  <ul><li><a href="#services">บริการ</a></li><li><a href="#pricing">ราคา</a></li><li><a href="#how">ขั้นตอน</a></li><li><a href="#contact">ติดต่อ</a></li></ul>
+  <ul><li><a href="#services">บริการ</a></li><li><a href="#portfolio">ผลงาน</a></li><li><a href="#pricing">ราคา</a></li><li><a href="#how">ขั้นตอน</a></li><li><a href="#contact">ติดต่อ</a></li></ul>
 </nav></div></header>
 
 <main class="wrap">
@@ -67,6 +90,31 @@ footer{padding:28px 0;color:var(--muted);font-size:.9rem;text-align:center}
       <div class="card"><span class="tag">PowerPoint</span><h3>สไลด์รายงาน / นำเสนอ</h3>
         <p>เปลี่ยนตัวเลขให้เป็นสไลด์สวย อ่านง่าย พร้อมเข้าประชุม</p>
         <ul><li>รายงานประชุมประจำวัน / ประจำเดือน</li><li>สไลด์เสนอขายลูกค้า</li><li>รูปสรุปยอดสำหรับส่งในไลน์กลุ่ม</li></ul></div>
+    </div>
+  </section>
+
+  <section id="portfolio">
+    <h2>ตัวอย่างผลงาน</h2><p class="sub">งานตัวอย่าง (Demo) เพื่อให้เห็นสไตล์งาน งานจริงจะทำตามแบรนด์และข้อมูลของร้านคุณ</p>
+    <div class="pf">
+      <div class="card"><div class="shot"><div class="phone" style="background:linear-gradient(160deg,#e11d48,#7c3aed)"><div class="top">รีวิวมือถือรุ่นใหม่<br>ใน 30 วินาที</div><div class="play"></div><div class="cc">กล้องชัด แบตอึด ราคาคุ้ม</div></div></div>
+        <div class="meta"><span class="tag">Video</span><h3>คลิปรีวิวสินค้า</h3><p>9:16 · 30 วินาที · ซับไทย + เพลง + ปก</p></div></div>
+      <div class="card"><div class="shot"><div class="phone" style="background:linear-gradient(160deg,#f59e0b,#e11d48)"><div class="top">โปรสุดสัปดาห์<br>ลดสูงสุด 20%</div><div class="play"></div><div class="cc">วันนี้ – อาทิตย์นี้เท่านั้น</div></div></div>
+        <div class="meta"><span class="tag">Video</span><h3>คลิปโปรโมชันร้าน</h3><p>Hook 3 วินาทีแรก · ข้อความชัด · แคปชันพร้อมโพสต์</p></div></div>
+      <div class="card"><div class="shot"><div class="mock full"><div class="bar">สรุปยอดขายรายเดือน</div>
+        <div class="kpis"><div><span>ยอดขาย</span><b>฿1.24M</b></div><div><span>เทียบเป้า</span><b>86%</b></div><div><span>จำนวนบิล</span><b>642</b></div></div>
+        <svg viewBox="0 0 220 80" preserveAspectRatio="none"><g fill="#16a34a"><rect x="12" y="38" width="18" height="34" rx="2"/><rect x="42" y="28" width="18" height="44" rx="2"/><rect x="72" y="44" width="18" height="28" rx="2"/><rect x="102" y="20" width="18" height="52" rx="2"/><rect x="132" y="30" width="18" height="42" rx="2"/><rect x="162" y="14" width="18" height="58" rx="2"/></g><rect x="192" y="24" width="18" height="48" rx="2" fill="#86efac"/><line x1="6" y1="26" x2="214" y2="26" stroke="#e11d48" stroke-dasharray="4 3"/></svg></div></div>
+        <div class="meta"><span class="tag">Excel</span><h3>Dashboard ยอดขาย</h3><p>วางข้อมูลแล้วสรุปอัตโนมัติ · กราฟ · เส้นเป้า</p></div></div>
+      <div class="card"><div class="shot"><div class="mock full"><div class="bar">ยอดขายรายพนักงาน เทียบเป้า</div>
+        <div class="rk"><div><span>พนักงาน A</span><i style="width:100%"></i><em>112%</em></div><div><span>พนักงาน B</span><i style="width:95%"></i><em>98%</em></div><div><span>พนักงาน C</span><i style="width:84%"></i><em>87%</em></div><div class="lo"><span>พนักงาน D</span><i style="width:66%"></i><em>68%</em></div><div class="lo"><span>พนักงาน E</span><i style="width:52%"></i><em>54%</em></div></div></div></div>
+        <div class="meta"><span class="tag">Excel</span><h3>รายงานรายพนักงาน</h3><p>จัดอันดับอัตโนมัติ · ไฮไลต์คนที่ต่ำกว่าเป้า</p></div></div>
+      <div class="card"><div class="shot"><div class="mock slide"><div class="sl"><h4>ผลการดำเนินงาน ไตรมาส 3</h4>
+        <ul><li>ยอดขายโต 12% จากไตรมาสก่อน</li><li>สินค้าขายดี: มือถือ / อุปกรณ์เสริม</li><li>แผนเดือนหน้า: เพิ่มคลิปโปรโมชัน</li></ul>
+        <svg viewBox="0 0 120 70"><polyline points="5,60 25,50 45,52 65,36 85,30 115,12" fill="none" stroke="#e11d48" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><line x1="5" y1="65" x2="115" y2="65" stroke="#d6d3d1"/></svg></div></div></div>
+        <div class="meta"><span class="tag">PowerPoint</span><h3>สไลด์ประชุมประจำเดือน</h3><p>เปลี่ยนตัวเลขเป็นสไลด์ที่อ่านจบใน 1 นาที</p></div></div>
+      <div class="card"><div class="shot"><div class="mock sq"><div class="ln"><div class="hd"><b>สรุปยอดขายประจำวัน</b><span>สาขาตัวอย่าง · 15 ต.ค.</span></div>
+        <div class="big"><b>฿86,450</b><span>ยอดขายรวมวันนี้</span></div>
+        <div class="r"><span>มือถือ</span><b>฿64,900</b></div><div class="r"><span>อุปกรณ์เสริม</span><b>฿12,350</b></div><div class="r"><span>ซ่อม/บริการ</span><b>฿9,200</b></div></div></div></div>
+        <div class="meta"><span class="tag">รูปรายงาน</span><h3>รูปสรุปยอดส่งไลน์กลุ่ม</h3><p>ภาพเดียวอ่านง่ายบนมือถือ ส่งทีมได้ทันที</p></div></div>
     </div>
   </section>
 
